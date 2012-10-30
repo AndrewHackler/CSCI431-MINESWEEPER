@@ -71,6 +71,9 @@ public class Minesweeper extends JPanel {
         
         this.add(statusBar,BorderLayout.NORTH);
     }
+    class MineFieldUnit {
+        
+    }
     class MinesweeperListener implements ActionListener {
 
         @Override
@@ -81,8 +84,8 @@ public class Minesweeper extends JPanel {
                         if(buttons[n][m] == (JButton)e.getSource()){
                             if(table[n][m] == -1){
                                 buttons[n][m].setBackground(Color.gray);
-                                buttons[n][m].setText("1");
-                                
+                                buttons[n][m].setForeground(Color.red);
+                                buttons[n][m].setText(box.value);
                             }
                         }
                     }
